@@ -1,9 +1,8 @@
+import { CreateUserController } from './controllers/user/CreateUserController';
 import {Router,Response,Request} from 'express';
 
 const router = Router();
 
-router.get('/teste', (req:Request, res:Response) => {
-     return res.send('Hello World!');
-});
+router.post('/users',new CreateUserController().hadle)
 
 export {router};
